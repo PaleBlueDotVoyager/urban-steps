@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&family=Protest+Guerrilla&family=Bebas+Neue&family=Kanit:wght@100;200;300;400;500;600;700;800&family=Quicksand:wght@300..700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    line-height: 1.6;
+    background-color: #F5F7F8;
+    color: #333;
+    margin-top: 5%;
+}
+
+header {
+    background: #F6F5F2;
+    color: #181C14;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-family: "Protest Guerrilla", sans-serif;
+    font-size: 2em;
+    margin: 0;
+}
+
+header a {
+    color: #181C14;
+    text-decoration: none;
+}
+
+nav {
+    flex-grow: 1;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    font-family: "PT Sans Narrow", sans-serif;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li:hover {
+    text-decoration: underline;
+}
+
+nav a {
+    color: #181C14;
+    text-decoration: none;
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    background: #295F98;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 10px;
+    font-family: "PT Sans Narrow", sans-serif;
+}
+
+.btn:hover {
+    background: #1e3a5f;
+}
+
+#hero {
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+#hero h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    font-family: "Bebas Neue", sans-serif;
+    color: #181C14;
+}
+
+#hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    line-height: 1.4;
+    color: #697565;
+    font-family: 'Quicksand', sans-serif;
+}
+
+section {
+    padding: 60px 20px;
+}
+
+section h2 {
+    text-align: center;
+    font-family: 'Bebas Neue', sans-serif;
+    color: #181C14;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+p {
+    font-family: 'Quicksand', sans-serif;
+    color: #697565;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+section p {
+    font-size: 1em;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    color: #697565;
+    font-family: 'Quicksand', sans-serif;
+}
+
+section ul {
+    list-style: none;
+    padding: 0;
+}
+
+section ul li {
+    font-size: 1.1em;
+    margin-bottom: 12px;
+    line-height: 1.7;
+    text-align: center;
+    color: #333;
+}
+
+section ul li strong {
+    font-weight: bold;
+    color: #181C14;
+}
+
+footer {
+    background-color: #F6F5F2;
+    padding: 20px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+    color: #181C14;
+    text-align: center;
+    font-family: "PT Sans Narrow", sans-serif;
+}
+
+footer p {
+    margin: 0;
+    color: #555;
+    font-size: 1rem;
+}
+
+footer a {
+    color: #295F98;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #181C14;
+}
+
+.testimonials {
+    background-color: #f9f9f9;
+    padding: 40px;
+    text-align: center;
+}
+
+.testimonials p {
+    font-style: italic;
+    font-size: 1.1rem;
+    margin: 20px 0;
+}
+
+.testimonials cite {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+.why-choose-us ul li {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.why-choose-us ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.intro {
+    background-color: #f0f8ff;
+}
+
+.history {
+    background-color: #ffffff;
+}
+
+.mission {
+    background-color: #f4f4f9;
+}
+
+.testimonials {
+    background-color: #f9f9f9;
+}
+
+.shipping {
+    background-color: #ffffff;
+}
+
+.contact {
+    background-color: #f0f8ff;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    section p {
+        font-size: 1rem;
+    }
+
+    .why-choose-us ul li {
+        padding: 15px;
+    }
+}
+
+.container {
+    margin-top: -4%;
+    margin-bottom: -4%;
+}
+
+.container a {
+    margin-top: -4%;
+    margin-bottom: -4%;
+}

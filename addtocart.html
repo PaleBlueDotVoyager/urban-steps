@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe Store - Add to Cart</title>
+    <link rel="stylesheet" href="CSS/landing.css">
+    <link rel="stylesheet" href="CSS/addtocart.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1><a href="#">UrbanSteps</a></h1>
+        <nav>
+            <ul class="nav-btn">
+                <li><a href="landing.html">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="user-menu">
+            <div class="dropdown">
+                <button class="btn1">
+                    <a href="profile.html">
+                        <i class="fa-solid fa-user" style="color: #181C14;"></i>
+                    </a>
+                </button>
+            </div>
+            <div class="dropdown">
+                <button class="btn1">
+                    <a href="cart.php">
+                        <i class="fa-solid fa-cart-shopping" style="color: #181C14;"></i>
+                    </a>
+                </button>
+            </div>
+            <div class="dropdown">
+                <button class="btn1">
+                    <a href="history.php">
+                        <i class="fa-solid fa-receipt" style="color: #181C14;"></i>
+                    </a>
+                </button>
+            </div>
+            <div class="dropdown">
+                <button class="btn1" onclick="location.href='landing_no_acc.html'">
+                    <i class="fas fa-sign-out-alt" style="color: #181C14;"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="order-container">
+        <div class="product-image">
+            <img src="images/nike1.png" alt="Stylish Sneakers">
+        </div>
+        <div class="product-details">
+            <h1>Nike 1</h1>
+            <p class="product-description">Stylish, fast, convenient.</p>
+
+            <!-- Product Form -->
+            <form action="cart.php" method="POST" onsubmit="return validateForm()">
+                <h2>Choose Size</h2>
+                <div class="size-options">
+                    <button type="button" class="size-option" onclick="selectSize(6)">6</button>
+                    <button type="button" class="size-option" onclick="selectSize(7)">7</button>
+                    <button type="button" class="size-option" onclick="selectSize(8)">8</button>
+                    <button type="button" class="size-option" onclick="selectSize(9)">9</button>
+                    <button type="button" class="size-option" onclick="selectSize(10)">10</button>
+                </div>
+                <input type="hidden" name="size" id="selected-size" required>
+
+                <h2>Choose Color</h2>
+                <div class="color-options">
+                    <div class="color-option" style="background-color: black;" onclick="selectColor('Black')"></div>
+                    <div class="color-option" style="background-color: white;" onclick="selectColor('White')"></div>
+                    <div class="color-option" style="background-color: red;" onclick="selectColor('Red')"></div>
+                </div>
+                <input type="hidden" name="color" id="selected-color" required>
+
+                <div class="qty">
+                    <h2>Quantity:</h2>
+                    <input type="number" id="quantity-input" name="quantity" value="1" min="1" class="quantity-input" required>
+                </div>
+
+                <input type="hidden" name="name" value="Nike 1">
+                <input type="hidden" name="price" value="100"> <!-- Set a price -->
+
+                <div class="buttons">
+                    <button type="submit" class="order-button">Add to Cart</button>
+                    <button type="button" class="order-button" onclick="window.location.href='product.html'">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-row">
+            <div class="footer-section">
+                <h2>Shortcuts</h2>
+                <a href="landing.html">Home</a>
+                <a href="product.html">Products</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h2>About Us</h2>
+                <p>Learn more about our story, mission, and values.</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="footer-section">
+                <h2>Contact Info</h2>
+                <p>Email: urbansteps@gmail.com</p>
+                <p>Phone: 09123456789</p>
+                <p>Address: Fatima Ave, corner MacArthur Hwy, Valenzuela, 1440 Metro Manila</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 UrbanSteps. <br>All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function selectSize(size) {
+            document.getElementById('selected-size').value = size;
+            const sizeButtons = document.querySelectorAll('.size-option');
+            sizeButtons.forEach(button => button.classList.remove('selected'));
+            event.target.classList.add('selected');
+        }
+
+        function selectColor(color) {
+            document.getElementById('selected-color').value = color;
+            const colorOptions = document.querySelectorAll('.color-option');
+            colorOptions.forEach(option => option.classList.remove('selected'));
+            event.target.classList.add('selected');
+        }
+
+        function validateForm() {
+            const selectedSize = document.getElementById('selected-size').value;
+            const selectedColor = document.getElementById('selected-color').value;
+
+            if (!selectedSize) {
+                alert("Please select a shoe size.");
+                return false; // Prevent form submission
+            }
+
+            if (!selectedColor) {
+                alert("Please select a shoe color.");
+                return false; // Prevent form submission
+            }
+
+            return true; // Allow form submission
+        }
+    </script>
+</body>
+</html>

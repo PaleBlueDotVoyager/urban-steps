@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="CSS/login_register.css">
+</head>
+<body>
+    <div class="container">
+        <form class="form" action="PHP/register.php" method="POST">
+            <h2>UrbanSteps</h2>
+            <p class="title">Register</p>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required placeholder="0912-345-6789">
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" required placeholder="Your address here">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+            <button type="submit" class="btn">Register</button>
+            <p>Already have an account? <a href="login.html">Login here</a></p>
+        </form>
+    </div>
+</body>
+</html>

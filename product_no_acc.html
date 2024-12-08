@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe Store - Add to Cart</title>
+    <link rel="stylesheet" href="CSS/landing.css">
+    <link rel="stylesheet" href="CSS/product.css">
+    <link rel="stylesheet" href="CSS/add-to-cart.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!--FOOTER-->
+    <link rel="stylesheet" href="CSS/footer.css">
+</head>
+<body>
+    <header>
+        <h1>
+            <a href="#">UrbanSteps</a>
+        </h1>
+        <nav>
+            <ul class="nav-btn">
+                <li><a href="landing_no_acc.html">Home</a></li>
+                <li><a href="product_no_acc.html">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="user-menu">
+            <div class="dropdown">
+                <button class="btn1">
+                    <a href="login.html">
+                        <i class="fa-solid fa-user" style="color: #181C14;"></i>
+                    </a>
+                </button>
+            </div>
+            <div class="dropdown">
+                <button class="btn1">
+                    <a href="login.html">
+                        <i class="fa-solid fa-cart-shopping" style="color: #181C14;"></i>
+                    </a>
+                </button>
+            </div>
+            <button class="btn1" onclick="location.href='register.html'">Sign Up</button>
+            <button class="btn1" onclick="location.href='login.html'">Login</button>
+        </div>
+    </header>
+
+    <section id="brands">
+        <h2>Select a Brand</h2>
+        <div class="brand-nav">
+            <div class="brand" onclick="showProducts('nike')">Nike</div>
+            <div class="brand" onclick="showProducts('newbalance')">New Balance</div>
+            <div class="brand" onclick="showProducts('converse')">Converse</div>
+            <div class="brand" onclick="showProducts('adidas')">Adidas</div>
+            <div class="brand" onclick="showProducts('puma')">Puma</div>
+            <div class="brand" onclick="showProducts('skechers')">Skechers</div>
+        </div>
+    </section>
+
+    <section id="products">
+        <div id="nike" class="product-container" style="display:contents;">
+            <div class="product">
+                <img src="images/n1.png" alt="Nike Air Max">
+                <h3>Nike Air Max</h3>
+                <p>$150.00</p>
+                <form action="../PHP/cart.php" method="post">
+                    <input type="hidden" name="productName" value="Nike Air Max">
+                    <input type="hidden" name="price" value="150.00">
+                    <input type="hidden" name="color" value="Black">
+                    <input type="hidden" name="size" value="10">
+                    <button type="submit" class="btn">
+                        <a href="login.html">Add to Cart</a>
+                    </button>
+                    <button type="submit" class="btn">
+                        <a href="login.html">Order Now</a>
+                    </button>
+                </form>
+            </div>
+            <div class="product">
+                <img src="images/n2.png" alt="Nike Zoom">
+                <h3>Nike Zoom</h3>
+                <p>$140.00</p>
+                <form action="PHP/cart.php" method="post">
+                    <input type="hidden" name="productName" value="Nike Zoom">
+                    <input type="hidden" name="price" value="140.00">
+                    <input type="hidden" name="color" value="Black">
+                    <input type="hidden" name="size" value="10">
+                    <button type="submit" class="btn">
+                        <a href="login.html">Add to Cart</a>
+                    </button>
+                    <button type="submit" class="btn">
+                        <a href="login.html">Order Now</a>
+                    </button>
+                </form>
+            </div>
+            <div class="product">
+                <img src="images/n3.png" alt="Nike Blazer">
+                <h3>Nike Blazer</h3>
+                <p>$130.00</p>
+                <form action="PHP/cart.php" method="post">
+                    <input type="hidden" name="productName" value="Nike Blazer">
+                    <input type="hidden" name="price" value="130.00">
+                    <input type="hidden" name="color" value="Black">
+                    <input type="hidden" name="size" value="10">
+                    <button type="submit" class="btn">
+                        <a href="login.html">Add to Cart</a>
+                    </button>
+                    <button type="submit" class="btn">
+                        <a href="login.html">Order Now</a>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div id="newbalance" class="product-container" style="display:none;">
+            <div class="product">
+                <img src="images/nb1.png" alt="New Balance 990">
+                <h3>New Balance 990</h3>
+                <p>$180.00</p>
+                <form action="PHP/cart.php" method="post">
+                    <input type="hidden" name="productName" value="New Balance 990">
+                    <input type="hidden" name="price" value="180.00">
+                    <input type="hidden" name="color" value="Grey">
+                    <input type="hidden" name="size" value="10">
+                    <button type="submit" class="btn">
+                        <a href="login.html">Add to Cart</a>
+                    </button>
+                    <button type="submit" class="btn">
+                        <a href="login.html">Order Now</a>
+                    </button>
+                </form>
+            </div>
+            <div class="product">
+                <img src="images/nb2.png" alt="New Balance 574">
+                <h3>New Balance 574</h3>
+                <p>$110.00</p>
+                <form action="PHP/cart.php" method="post">
+                    <input type="hidden" name="productName" value="New Balance 574">
+                    <input type="hidden" name="price" value="110.00">
+                    <input type="hidden" name="color" value="Grey">
+                    <input type="hidden" name="size" value="10">
+                    <button type="submit" class="btn">
+                        <a href="login.html">Add to Cart</a>
+                    </button>
+                    <button type="submit" class="btn">
+                        <a href="login.html">Order Now</a>
+                    </button>
+                </form>
+            </div>
+            <div class="product">
+                <img src="images/nb3.png" alt="New Balance 860">
+                <h3>New Balance 860</h3>
+                <p>$120.00</p>
+                <form action="PHP/cart.php" method="post">
+                    <input type="hidden" name="productName" value="New Balance 860">
+                    <input type="hidden" name="price" value="120.00">
+                    <input type="hidden" name="color" value="Grey">
+                    <input type="hidden" name="size" value="10">
+                    <button type="submit" class="btn">
+                        <a href="login.html">Add to Cart</a>
+                    </button>
+                    <button type="submit" class="btn">
+                        <a href="login.html">Order Now</a>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div id="converse" class="product-container" style="display:none;">
+            <div class="product">
+                <img src="images/con1.png" alt="Converse Chuck Taylor">
+                <h3>Converse Chuck Taylor</h3>
+                <p>$65.00</p>
+                <form action="PHP/cart.php" method="post">
+                    <input type="hidden" name="productName" value="Converse Chuck Taylor">
+                    <input type="hidden" name="price" value="65.00">
+                    <input type="hidden" name="color" value="Black">
+                    <input type="hidden" name="size" value="10">
+                    <button type="submit" class="btn">
+                        <a href="login.html">Add to Cart</a>
+                    </button>
+                    <button type="submit" class="btn">
+                        <a href="login.html">Order Now</a>
+                    </button>
+                </form>
+            </div>
+            <div class="product">
+                <img src="images/con2.png" alt="Converse All Star">
+                <h3>Converse All Star</h3>
+                <p>$70.00</p>
+                <form action="PHP/cart.php" method="post">
+                    <input type="hidden" name="productName" value="Converse All Star">
+                    <input type="hidden" name="price" value="70.00">
+                    <input type="hidden" name="color" value="Black">
+                    <input type="hidden" name="size" value="10">
+                    <button type="submit" class="btn">
+                        <a href="login.html">Add to Cart</a>
+                    </button>
+                    <button type="submit" class="btn">
+                        <a href="login.html">Order Now</a>
+                    </button>
+                </form>
+            </div>
+            <div class="product">
+                <img src="images/con3.png" alt="Converse One Star">
+                <h3>Converse One Star</h3>
+                <p>$80.00</p>
+                <form action="PHP/cart.php" method="post">
+                    <input type="hidden" name="productName" value="Converse One Star">
+                    <input type="hidden" name="price" value="80.00">
+                    <input type="hidden" name="color" value="Black">
+                    <input type="hidden" name="size" value="10">
+                    <button type="submit" class="btn">
+                        <a href="login.html">Add to Cart</a>
+                    </button>
+                    <button type="submit" class="btn">
+                        <a href="login.html">Order Now</a>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div id="adidas" class="product-container" style="display:none;">
+            <div class="product">
+                <img src="images/adidas1.png" alt="Adidas Model 1">
+                <h3>Adidas Yeezy</h3>
+                <p>$65.00</p>
+                <form action="PHP/cart.php" method="post">
+                    <input type="hidden" name="productName" value="Adidas Model 1">
+                    <input type="hidden" name="price" value="65.00">
+                    <input type="hidden" name="color" value="White">
+                    <input type="hidden" name="size" value="10">
+                    <button type="submit" class="btn">
+                        <a href="login.html">Add to Cart</a>
+                    </button>
+                    <button type="submit" class="btn">
+                        <a href="login.html">Order Now</a>
+                    </button>
+                </form>
+            </div>
+            <div class="product">
+                <img src="images/adidas2.png" alt="Adidas Model 2">
+                <h3>Adidas NMD</h3>
+                <p>$70.00</p>
+                <form action="PHP/cart.php" method="post">
+                    <input type="hidden" name="productName" value="Adidas Model 2">
+                    <input type="hidden" name="price" value="70.00">
+                    <input type="hidden" name="color" value="White">
+                    <input type="hidden" name="size" value="10">
+                    <button type="submit" class="btn">
+                        <a href="login.html">Add to Cart</a>
+                    </button>
+                    <button type="submit" class="btn">
+                        <a href="login.html">Order Now</a>
+                    </button>
+                </form>
+            </div>
+            <div class="product">
+                <img src="images/adidas3.png" alt="Adidas Model 3">
+                <h3>Adidas Ultraboost</h3>
+                <p>$80.00</p>
+                <form action="PHP/cart.php" method="post">
+                    <input type="hidden" name="productName" value="Adidas Model 3">
+                    <input type="hidden" name="price" value="80.00">
+                    <input type="hidden" name="color" value="White">
+                    <input type="hidden" name="size" value="10">
+                    <button type="submit" class="btn">
+                        <a href="login.html">Add to Cart</a>
+                    </button>
+                    <button type="submit" class="btn">
+                        <a href="login.html">Order Now</a>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div id="puma" class="product-container" style="display:none;">
+            <div class="product">
+                <img src="images/puma1.png" alt="Puma Model 1">
+                <h3>Puma RS-X</h3>
+                <p>$65.00</p>
+                <form action="PHP/cart.php" method="post">
+                    <input type="hidden" name="productName" value="Puma Model 1">
+                    <input type="hidden" name="price" value="65.00">
+                    <input type="hidden" name="color" value="Black">
+                    <input type="hidden" name="size" value="10">
+                    <button type="submit" class="btn">
+                        <a href="login.html">Add to Cart</a>
+                    </button>
+                    <button type="submit" class="btn">
+                        <a href="login.html">Order Now</a>
+                    </button>
+                </form>
+            </div>
+            <div class="product">
+                <img src="images/puma2.png" alt="Puma Model 2">
+                <h3>Puma Suede</h3>
+                <p>$70.00</p>
+                <form action="PHP/cart.php" method="post">
+                    <input type="hidden" name="productName" value="Puma Model 2">
+                    <input type="hidden" name="price" value="70.00">
+                    <input type="hidden" name="color" value="Black">
+                    <input type="hidden" name="size" value="10">
+                    <button type="submit" class="btn">
+                        <a href="login.html">Add to Cart</a>
+                    </button>
+                    <button type="submit" class="btn">
+                        <a href="login.html">Order Now</a>
+                    </button>
+                </form>
+            </div>
+            <div class="product">
+                <img src="images/puma3.png" alt="Puma Model 3">
+                <h3>Puma RS-0</h3>
+                <p>$80.00</p>
+                <form action="PHP/cart.php" method="post">
+                    <input type="hidden" name="productName" value="Puma Model 3">
+                    <input type="hidden" name="price" value="80.00">
+                    <input type="hidden" name="color" value="Black">
+                    <input type="hidden" name="size" value="10">
+                    <button type="submit" class="btn">
+                        <a href="login.html">Add to Cart</a>
+                    </button>
+                    <button type="submit" class="btn">
+                        <a href="login.html">Order Now</a>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div id="skechers" class="product-container" style="display:none;">
+            <div class="product">
+                <img src="images/skechers1.png" alt="Skechers Model 1">
+                <h3>Skechers Go Walk</h3>
+                <p>$65.00</p>
+                <form action="PHP/cart.php" method="post">
+                    <input type="hidden" name="productName" value="Skechers Model 1">
+                    <input type="hidden" name="price" value="65.00">
+                    <input type="hidden" name="color" value="Black">
+                    <input type="hidden" name="size" value="10">
+                    <button type="submit" class="btn">
+                        <a href="login.html">Add to Cart</a>
+                    </button>
+                    <button type="submit" class="btn">
+                        <a href="login.html">Order Now</a>
+                    </button>
+                </form>
+            </div>
+            <div class="product">
+                <img src="images/skechers2.png" alt="Skechers Model 2">
+                <h3>Skechers D'Lites</h3>
+                <p>$70.00</p>
+                <form action="PHP/cart.php" method="post">
+                    <input type="hidden" name="productName" value="Skechers Model 2">
+                    <input type="hidden" name="price" value="70.00">
+                    <input type="hidden" name="color" value="Black">
+                    <input type="hidden" name="size" value="10">
+                    <button type="submit" class="btn">
+                        <a href="login.html">Add to Cart</a>
+                    </button>
+                    <button type="submit" class="btn">
+                        <a href="login.html">Order Now</a>
+                    </button>
+                </form>
+            </div>
+            <div class="product">
+                <img src="images/skechers3.png" alt="Skechers Model 3">
+                <h3>Skechers Flex Appeal</h3>
+                <p>$80.00</p>
+                <form action="PHP/cart.php" method="post">
+                    <input type="hidden" name="productName" value="Skechers Model 3">
+                    <input type="hidden" name="price" value="80.00">
+                    <input type="hidden" name="color" value="Black">
+                    <input type="hidden" name="size" value="10">
+                    <button type="submit" class="btn">
+                        <a href="login.html">Add to Cart</a>
+                    </button>
+                    <button type="submit" class="btn">
+                        <a href="login.html">Order Now</a>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-row">
+            <div class="footer-section">
+                <h2>Shortcuts</h2>
+                <a href="landing_no_acc.html">Home</a>
+                <a href="product_no_acc.html">Products</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h2>About Us</h2>
+                <p>Learn more about our story, mission, and values.</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="footer-section">
+                <h2>Contact Info</h2>
+                <p>Email: urbansteps@gmail.com</p>
+                <p>Phone: 09123456789</p>
+                <p>Address: Fatima Ave, corner MacArthur Hwy, Valenzuela, 1440 Metro Manila</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 UrbanSteps. <br>All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function showProducts(brand) {
+            const containers = document.querySelectorAll('.product-container');
+            containers.forEach(container => {
+                container.style.display = 'none'; // Hide all
+            });
+            document.getElementById(brand).style.display = 'block'; // Show selected
+        }
+    </script>
+</body>
+</html>

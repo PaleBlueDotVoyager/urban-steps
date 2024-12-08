@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe Store - Order History</title>
+    <link rel="stylesheet" href="CSS/landing.css">
+    <link rel="stylesheet" href="CSS/addtocart.css">
+    <link rel="stylesheet" href="CSS/history.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1><a href="#">UrbanSteps</a></h1>
+        <nav>
+            <ul class="nav-btn">
+                <li><a href="landing.html">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="user-menu">
+            <div class="dropdown">
+                <button class="btn1">
+                    <a href="profile.html">
+                        <i class="fa-solid fa-user" style="color: #181C14;"></i>
+                    </a>
+                </button>
+            </div>
+            <div class="dropdown">
+                <button class="btn1">
+                    <a href="cart.html">
+                        <i class="fa-solid fa-cart-shopping" style="color: #181C14;"></i>
+                    </a>
+                </button>
+            </div>
+            <div class="dropdown">
+                <button class="btn1">
+                    <a href="../PHP/history.php">
+                        <i class="fa-solid fa-receipt" style="color: #181C14;"></i>
+                    </a>
+                </button>
+            </div>
+            <div class="dropdown">
+                <button class="btn1" onclick="location.href='landing_no_acc.html'">
+                    <i class="fas fa-sign-out-alt" style="color: #181C14;"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="order-history">
+        <h2>Your Order History</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Shoe Brand</th>
+                    <th>Size</th>
+                    <th>Color</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                // Example order data (replace this with your database logic)
+                $orders = [
+                    ['brand' => 'Nike 1', 'size' => '10', 'color' => 'Black', 'quantity' => 1, 'price' => 100],
+                    // Add more orders as needed
+                ];
+
+                foreach ($orders as $order) {
+                    echo "<tr>
+                            <td>{$order['brand']}</td>
+                            <td>{$order['size']}</td>
+                            <td>{$order['color']}</td>
+                            <td>{$order['quantity']}</td>
+                            <td>\${$order['price']}</td>
+                            <td>
+                                <form action='remove_order.php' method='POST'>
+                                    <input type='hidden' name='order_id' value='{$order['id']}'>
+                                    <button type='submit'>Cancel</button>
+                                </form>
+                            </td>
+                          </tr>";
+                }
+                ?>
+            </tbody>
+        </table>
+        <div class="buttons">
+            <button onclick="window.print()">Print Your Receipt</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-row">
+            <div class="footer-section">
+                <h2>Shortcuts</h2>
+                <a href="landing.html">Home</a>
+                <a href="product.html">Products</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h2>About Us</h2>
+                <p>Learn more about our story, mission, and values.</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="footer-section">
+                <h2>Contact Info</h2>
+                <p>Email: urbansteps@gmail.com</p>
+                <p>Phone: 09123456789</p>
+                <p>Address: Fatima Ave, corner MacArthur Hwy, Valenzuela, 1440 Metro Manila</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 UrbanSteps. <br>All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

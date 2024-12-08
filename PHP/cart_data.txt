@@ -1,0 +1,1 @@
+a:1:{i:0;a:6:{s:4:"name";s:12:"Nike Air Max";s:5:"price";d:150;s:4:"size";s:1:"9";s:5:"color";s:5:"Black";s:8:"quantity";i:2;s:5:"image";s:16:"../images/n1.png";}}

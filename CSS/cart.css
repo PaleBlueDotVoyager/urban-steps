@@ -1,0 +1,120 @@
+#cart {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #333;
+}
+#cart {
+    margin-top: 5%;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eaeaea;
+    transition: background 0.3s;
+}
+.info {
+    display: flex;
+    flex-direction: row;
+}
+.cart-btn {
+    display: flex;
+    flex-direction: column;
+}
+.cart-btn button {
+    margin-top: 2%;
+    padding-left: 2px;
+    padding-right: 2px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.cart-item:hover {
+    background: #f7f7f7;
+}
+
+.cart-item img {
+    max-width: 100px;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.cart-item div {
+    flex-grow: 1;
+}
+
+.cart-item h3 {
+    margin: 0 0 5px;
+    font-size: 18px;
+    color: #444;
+}
+
+.cart-item p {
+    margin: 5px 0;
+    color: #777;
+}
+
+.cart-item .delete-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #e74c3c;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.cart-item .delete-btn:hover {
+    background-color: #c0392b;
+}
+
+.order-history {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.order-history button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.order-history button:hover {
+    background-color: #2980b9;
+}
+
+.order-now {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.order-now button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s;
+}
+
+.order-now button:hover {
+    background-color: #218838;
+}

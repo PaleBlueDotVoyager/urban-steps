@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe Store - Add to Cart</title>
+    <link rel="stylesheet" href="CSS/landing.css">
+    <link rel="stylesheet" href="CSS/product.css">
+    <link rel="stylesheet" href="CSS/add-to-cart.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1><a href="#">UrbanSteps</a></h1>
+        <nav>
+            <ul class="nav-btn">
+                <li><a href="landing.html">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="user-menu">
+            <div class="dropdown">
+                <button class="btn1">
+                    <a href="profile.html">
+                        <i class="fa-solid fa-user" style="color: #181C14;"></i>
+                    </a>
+                </button>
+            </div>
+            <div class="dropdown">
+                <button class="btn1">
+                    <a href="../HTML/PHP/cart.php">
+                        <i class="fa-solid fa-cart-shopping" style="color: #181C14;"></i>
+                    </a>
+                </button>
+            </div>
+            <div class="dropdown">
+                <button class="btn1">
+                    <a href="../PHP/history.php">
+                        <i class="fa-solid fa-receipt" style="color: #181C14;"></i>
+                    </a>
+                </button>
+            </div>
+            <div class="dropdown">
+                <button class="btn1" onclick="location.href='landing_no_acc.html'">
+                    <i class="fas fa-sign-out-alt" style="color: #181C14;"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section id="brands">
+        <h2>Select a Brand</h2>
+        <div class="brand-nav">
+            <div class="brand" onclick="showProducts('nike')">Nike</div>
+            <div class="brand" onclick="showProducts('newbalance')">New Balance</div>
+            <div class="brand" onclick="showProducts('converse')">Converse</div>
+            <div class="brand" onclick="showProducts('adidas')">Adidas</div>
+            <div class="brand" onclick="showProducts('puma')">Puma</div>
+            <div class="brand" onclick="showProducts('skechers')">Skechers</div>
+        </div>
+    </section>
+
+    <section id="products">
+        <div id="nike" class="product-container" style="display:none;">
+            <div class="product">
+                <img src="images/nike1.png" alt="Nike Air Max">
+                <h3>Nike Air Max</h3>
+                <p>$150.00</p>
+                <a href="PHP/add_to_cart.php?name=Nike%20Air%20Max&price=150.00&image=images/nike1.png" class="btn">Add to Cart</a>
+                <a href="order.html" class="btn">Order Now</a>
+            </div>
+            <div class="product">
+                <img src="images/nike1.png" alt="Nike Zoom">
+                <h3>Nike Zoom</h3>
+                <p>$140.00</p>
+                <a href="PHP/add_to_cart.php?name=Nike%20Zoom&price=140.00&image=images/nike1.png" class="btn">Add to Cart</a>
+                <a href="order.html" class="btn">Order Now</a>
+            </div>
+            <div class="product">
+                <img src="images/nike1.png" alt="Nike Blazer">
+                <h3>Nike Blazer</h3>
+                <p>$130.00</p>
+                <a href="PHP/add_to_cart.php?name=Nike%20Blazer&price=130.00&image=images/nike1.png" class="btn">Add to Cart</a>
+                <a href="order.html" class="btn">Order Now</a>
+            </div>
+        </div>
+
+        <div id="newbalance" class="product-container" style="display:none;">
+            <div class="product">
+                <img src="images/newbalance.png" alt="New Balance 990">
+                <h3>New Balance 990</h3>
+                <p>$180.00</p>
+                <a href="PHP/add_to_cart.php?name=New%20Balance%20990&price=180.00&image=images/newbalance.png" class="btn">Add to Cart</a>
+                <a href="order.html" class="btn">Order Now</a>
+            </div>
+            <div class="product">
+                <img src="images/newbalance.png" alt="New Balance 574">
+                <h3>New Balance 574</h3>
+                <p>$110.00</p>
+                <a href="PHP/add_to_cart.php?name=New%20Balance%20574&price=110.00&image=images/newbalance.png" class="btn">Add to Cart</a>
+                <a href="order.html" class="btn">Order Now</a>
+            </div>
+            <div class="product">
+                <img src="images/newbalance.png" alt="New Balance 860">
+                <h3>New Balance 860</h3>
+                <p>$120.00</p>
+                <a href="PHP/add_to_cart.php?name=New%20Balance%20860&price=120.00&image=images/newbalance.png" class="btn">Add to Cart</a>
+                <a href="order.html" class="btn">Order Now</a>
+            </div>
+        </div>
+
+        <div id="converse" class="product-container" style="display:none;">
+            <div class="product">
+                <img src="images/converse.png" alt="Converse Chuck Taylor">
+                <h3>Converse Chuck Taylor</h3>
+                <p>$65.00</p>
+                <a href="PHP/add_to_cart.php?name=Converse%20Chuck%20Taylor&price=65.00&image=images/converse.png" class="btn">Add to Cart</a>
+                <a href="order.html" class="btn">Order Now</a>
+            </div>
+            <div class="product">
+                <img src="images/converse.png" alt="Converse All Star">
+                <h3>Converse All Star</h3>
+                <p>$70.00</p>
+                <a href="PHP/add_to_cart.php?name=Converse%20All%20Star&price=70.00&image=images/converse.png" class="btn">Add to Cart</a>
+                <a href="order.html" class="btn">Order Now</a>
+            </div>
+            <div class="product">
+                <img src="images/converse.png" alt="Converse One Star">
+                <h3>Converse One Star</h3>
+                <p>$80.00</p>
+                <a href="PHP/add_to_cart.php?name=Converse%20One%20Star&price=80.00&image=images/converse.png" class="btn">Add to Cart</a>
+                <a href="order.html" class="btn">Order Now</a>
+            </div>
+        </div>
+
+        <div id="adidas" class="product-container" style="display:none;">
+            <div class="product">
+                <img src="images/adidas1.png" alt="Adidas Model 1">
+                <h3>Adidas Model 1</h3>
+                <p>$65.00</p>
+                <a href="PHP/add_to_cart.php?name=Adidas%20Model%201&price=65.00&image=images/adidas1.png" class="btn">Add to Cart</a>
+                <a href="order.html" class="btn">Order Now</a>
+            </div>
+            <div class="product">
+                <img src="images/adidas1.png" alt="Adidas Model 2">
+                <h3>Adidas Model 2</h3>
+                <p>$70.00</p>
+                <a href="PHP/add_to_cart.php?name=Adidas%20Model%202&price=70.00&image=images/adidas1.png" class="btn">Add to Cart</a>
+                <a href="order.html" class="btn">Order Now</a>
+            </div>
+            <div class="product">
+                <img src="images/adidas1.png" alt="Adidas Model 3">
+                <h3>Adidas Model 3</h3>
+                <p>$75.00</p>
+                <a href="PHP/add_to_cart.php?name=Adidas%20Model%203&price=75.00&image=images/adidas1.png" class="btn">Add to Cart</a>
+                <a href="order.html" class="btn">Order Now</a>
+            </div>
+        </div>
+
+        <div id="puma" class="product-container" style="display:none;">
+            <div class="product">
+                <img src="images/puma1.png" alt="Puma Model 1">
+                <h3>Puma Model 1</h3>
+                <p>$90.00</p>
+                <a href="PHP/add_to_cart.php?name=Puma%20Model%201&price=90.00&image=images/puma1.png" class="btn">Add to Cart</a>
+                <a href="order.html" class="btn">Order Now</a>
+            </div>
+            <div class="product">
+                <img src="images/puma1.png" alt="Puma Model 2">
+                <h3>Puma Model 2</h3>
+                <p>$95.00</p>
+                <a href="PHP/add_to_cart.php?name=Puma%20Model%202&price=95.00&image=images/puma1.png" class="btn">Add to Cart</a>
+                <a href="order.html" class="btn">Order Now</a>
+            </div>
+            <div class="product">
+                <img src="images/puma1.png" alt="Puma Model 3">
+                <h3>Puma Model 3</h3>
+                <p>$85.00</p>
+                <a href="PHP/add_to_cart.php?name=Puma%20Model%203&price=85.00&image=images/puma1.png" class="btn">Add to Cart</a>
+                <a href="order.html" class="btn">Order Now</a>
+            </div>
+        </div>
+
+        <div id="skechers" class="product-container" style="display:none;">
+            <div class="product">
+                <img src="images/skechers1.png" alt="Skechers Model 1">
+                <h3>Skechers Model 1</h3>
+                <p>$70.00</p>
+                <a href="PHP/add_to_cart.php?name=Skechers%20Model%201&price=70.00&image=images/skechers1.png" class="btn">Add to Cart</a>
+                <a href="order.html" class="btn">Order Now</a>
+            </div>
+            <div class="product">
+                <img src="images/skechers1.png" alt="Skechers Model 2">
+                <h3>Skechers Model 2</h3>
+                <p>$75.00</p>
+                <a href="PHP/add_to_cart.php?name=Skechers%20Model%202&price=75.00&image=images/skechers1.png" class="btn">Add to Cart</a>
+                <a href="order.html" class="btn">Order Now</a>
+            </div>
+            <div class="product">
+                <img src="images/skechers1.png" alt="Skechers Model 3">
+                <h3>Skechers Model 3</h3>
+                <p>$80.00</p>
+                <a href="PHP/add_to_cart.php?name=Skechers%20Model%203&price=80.00&image=images/skechers1.png" class="btn">Add to Cart</a>
+                <a href="order.html" class="btn">Order Now</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function showProducts(brand) {
+            var brands = ['nike', 'newbalance', 'converse', 'adidas', 'puma', 'skechers'];
+            brands.forEach(function(b) {
+                document.getElementById(b).style.display = (b === brand) ? 'block' : 'none';
+            });
+        }
+    </script>
+</body>
+</html>

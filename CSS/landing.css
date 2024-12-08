@@ -1,0 +1,319 @@
+/*HEADER H1 FONT*/
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&family=Protest+Guerrilla&display=swap');
+/*HERO H2 FONT*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=PT+Sans+Narrow:wght@400;700&family=Protest+Guerrilla&display=swap');
+/*HERO P FONT*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=PT+Sans+Narrow:wght@400;700&family=Protest+Guerrilla&family=Quicksand:wght@300..700&display=swap');
+/*PRODUCTS H2 FONT*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=PT+Sans+Narrow:wght@400;700&family=Protest+Guerrilla&family=Quicksand:wght@300..700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.0;
+    background-color: #F5F7F8;
+    color: #333;
+}
+
+header {
+    background: #F6F5F2;
+    color: #181C14;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between; /* Space between the elements */
+    align-items: center; /* Center vertically */
+    position: fixed; /* Make the header fixed */
+    top: 0; /* Position it at the top */
+    left: 0; /* Align with the left edge */
+    right: 0; /* Align with the right edge */
+    z-index: 1000; /* Ensure it stays on top of other elements */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Add shadow */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    font-family: "Protest Guerrilla", sans-serif;
+}
+header a {
+    text-decoration: none;
+    color: #181C14;
+}
+
+nav {
+    flex-grow: 1; /* Allow nav to take up available space */
+    text-align: center; /* Center the nav items */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Display flex for horizontal alignment */
+    justify-content: center; /* Center the nav items */
+    font-family: "PT Sans Narrow", sans-serif;
+}
+
+nav ul li {
+    margin: 0 15px; /* Margin between nav items */
+}
+nav ul li:hover {
+    text-decoration: underline;
+    transition-delay: 1.5s;
+
+}
+
+nav a {
+    color: #181C14;
+    text-decoration: none;
+}
+
+.user-menu {
+    display: flex; /* Use flexbox for user menu */
+    align-items: center; /* Center items vertically */
+}
+
+.btn2 {
+    background: #181C14;
+    /*background: #697565;*/
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 10px; /* Margin between buttons */
+    font-family: "PT Sans Narrow", sans-serif;
+}
+.btn2:hover {
+    background: #697565;
+}
+.btn1 {
+    background: none;
+    /*background: #697565;*/
+    color: #181C14;
+    border: none;
+    /*padding: 10px 15px;*/
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 10px; /* Margin between buttons */
+    font-family: "PT Sans Narrow", sans-serif;
+}
+.btn {
+    background: #295F98;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 10px; /* Margin between buttons */
+    font-family: "PT Sans Narrow", sans-serif;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Remaining styles unchanged */
+#hero {
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+#hero h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #181C14;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+#hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #697565;
+    font-family: "Quicksand", sans-serif;
+}
+
+#products {
+    padding: 20px;
+    text-align: center;
+    background-color: #E9EFEC;
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 
+        0 2px 5px rgba(0, 0, 0, 0.2),  /* Bottom shadow */
+        0 -2px 5px rgba(0, 0, 0, 0.2), /* Top shadow */
+        2px 0 5px rgba(0, 0, 0, 0.2),  /* Right shadow */
+        -2px 0 5px rgba(0, 0, 0, 0.2); /* Left shadow */
+    margin-bottom: 5%;
+}
+
+#products h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    font-family: "Kanit", sans-serif;
+    color: #181C14;
+}
+
+.product {
+    display: inline-block;
+    margin: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    height: 350px;
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+.product img {
+    width: 100%;
+    margin-top: -10%;
+    border-radius: 10px 10px 0 0;
+}
+
+.product h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+    margin-top: -10%;
+    text-align: center;
+    font-family: "PT Sans Narrow", sans-serif;
+}
+
+.product p {
+    font-size: 1em;
+    color: #181C14;
+    margin-bottom: 10%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: "PT Sans Narrow", sans-serif;
+}
+
+footer {
+    background-color: #F6F5F2;
+    box-shadow: 
+        0 -2px 5px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    padding-top: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;  
+    padding: 0 50px; 
+    margin-bottom: 20px;
+}
+
+.footer-section {
+    flex: 1; 
+    margin: 0 20px; 
+    text-align: left; 
+    font-family: "PT Sans Narrow", sans-serif;
+}
+
+.footer-section h2, .footer-section h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #181C14;
+}
+
+.footer-section p, .footer-section a {
+    color: #697565;
+    font-size: 14px;
+    margin-bottom: 1px;
+}
+
+.footer-section a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #fff;
+}
+
+.social-links {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.social-links a {
+    color: #bbb;
+    font-size: 14px;
+    text-decoration: none;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.social-links a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 1px 0;
+    background-color: #333;
+    font-family: "PT Sans Narrow", sans-serif;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #bbb;
+    font-size: 14px;
+}
+
+.user-menu {
+    display: flex; /* Use flexbox for user menu */
+    align-items: center; /* Center items vertically */
+}
+
+.dropdown {
+    position: relative; /* Position for dropdown content */
+    margin-left: 10px; /* Margin between buttons */
+}
+
+.dropdown-content {
+    display: none; /* Hide dropdown by default */
+    position: absolute; /* Position dropdown content */
+    background-color: #fff; /* Background color */
+    min-width: 160px; /* Minimum width */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Shadow for dropdown */
+    z-index: 1; /* Ensure it appears above other content */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Show dropdown on hover */
+}
+
+.dropdown-content a {
+    color: #333; /* Text color */
+    padding: 12px 10px; /* Padding */
+    text-decoration: none; /* No underline */
+    display: block; /* Display as block */
+    font-family: "PT Sans Narrow", sans-serif;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1; /* Change background on hover */
+}
+

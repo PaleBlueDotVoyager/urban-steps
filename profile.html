@@ -1,0 +1,153 @@
+<?php
+session_start();
+if (!isset($_SESSION['user'])) {
+    header('Location: login.html');
+    exit;
+}
+$user = $_SESSION['user'];
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - UrbanSteps</title>
+    <link rel="stylesheet" href="CSS/profile.css">
+    <link rel="stylesheet" href="CSS/landing.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        .profile-info div {
+            margin-bottom: 10px;
+        }
+        input[type="text"], input[type="tel"], input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            display: none; /* Initially hidden */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="#">UrbanSteps</a></h1>
+        <nav>
+            <ul class="nav-btn">
+                <li><a href="landing.html">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="user-menu">
+            <div class="dropdown">
+                <button class="btn1">
+                    <a href="profile.html">
+                        <i class="fa-solid fa-user" style="color: #181C14;"></i>
+                    </a>
+                </button>
+            </div>
+            <div class="dropdown">
+                <button class="btn1">
+                    <a href="cart.html">
+                        <i class="fa-solid fa-cart-shopping" style="color: #181C14;"></i>
+                    </a>
+                </button>
+            </div>
+            <div class="dropdown">
+                <button class="btn1">
+                    <a href="../PHP/history.php">
+                        <i class="fa-solid fa-receipt" style="color: #181C14;"></i>
+                    </a>
+                </button>
+            </div>
+            <div class="dropdown">
+                <button class="btn1" onclick="location.href='landing_no_acc.html'">
+                    <i class="fas fa-sign-out-alt" style="color: #181C14;"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section id="profile">
+        <h2>User Profile</h2>
+        <div class="profile-info">
+            <div>
+                <label for="username">Username:</label>
+                <p id="username"><?php echo htmlspecialchars($user['username']); ?></p>
+                <input type="text" id="username-input" value="<?php echo htmlspecialchars($user['username']); ?>">
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <p id="email"><?php echo htmlspecialchars($user['email']); ?></p>
+                <input type="text" id="email-input" value="<?php echo htmlspecialchars($user['email']); ?>">
+            </div>
+            <div>
+                <label for="phone">Phone Number:</label>
+                <p id="phone"><?php echo htmlspecialchars($user['phone']); ?></p>
+                <input type="tel" id="phone-input" value="<?php echo htmlspecialchars($user['phone']); ?>">
+            </div>
+            <div>
+                <label for="address">Address:</label> <!-- New Address Field -->
+                <p id="address"><?php echo htmlspecialchars($user['address']); ?></p>
+                <input type="text" id="address-input" value="<?php echo htmlspecialchars($user['address']); ?>">
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <p id="password">********</p>
+                <input type="password" id="password-input" value="your-password-here" style="display: none;">
+            </div>
+        </div>
+        <button class="btn1" id="edit-button" onclick="toggleEdit()">Edit Profile</button>
+    </section>
+
+    <footer>
+        <div class="footer-row">
+            <div class="footer-section">
+                <h2>Shortcuts</h2>
+                <a href="landing.html">Home</a>
+                <a href="product.html">Products</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h2>About Us</h2>
+                <p>Learn more about our story, mission, and values.</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="footer-section">
+                <h2>Contact Info</h2>
+                <p>Email: urbansteps@gmail.com</p>
+                <p>Phone: 09123456789</p>
+                <p>Address: Fatima Ave, corner MacArthur Hwy, Valenzuela, 1440 Metro Manila</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 UrbanSteps. <br>All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleEdit() {
+            const isEditing = document.getElementById('username-input').style.display === 'block';
+            const fields = ['username', 'email', 'phone', 'address', 'password'];
+            fields.forEach(field => {
+                const p = document.getElementById(field);
+                const input = document.getElementById(`${field}-input`);
+                if (isEditing) {
+                    p.textContent = input.value;
+                    input.style.display = 'none';
+                    p.style.display = 'block';
+                } else {
+                    input.style.display = 'block';
+                    p.style.display = 'none';
+                }
+            });
+            const editButton = document.getElementById('edit-button');
+            editButton.textContent = isEditing ? 'Edit Profile' : 'Save Changes';
+        }
+    </script>
+</body>
+</html>

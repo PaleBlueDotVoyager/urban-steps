@@ -1,0 +1,80 @@
+/*FORM H2 FONT*/
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&family=Protest+Guerrilla&display=swap');
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form h2 {
+    margin-top: -1%;
+    margin-bottom: -2%;
+    text-align: center;
+    font-family: "Protest Guerrilla", sans-serif;
+    font-size: 30px;
+    text-decoration: underline;
+}
+.title {
+    font-size: 15px;
+    font-family: "PT Sans Narrow", sans-serif;
+    font-weight: bold;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+}
+
+.btn {
+    background-color: #181C14;
+    color: white;
+    padding: 0.5rem;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #218838;
+}
+
+p {
+    text-align: center;
+    font-size: 10px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

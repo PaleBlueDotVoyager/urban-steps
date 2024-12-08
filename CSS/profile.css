@@ -1,0 +1,214 @@
+/*HEADER H1 FONT*/
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&family=Protest+Guerrilla&display=swap');
+/*HERO H2 FONT*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=PT+Sans+Narrow:wght@400;700&family=Protest+Guerrilla&display=swap');
+/*HERO P FONT*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=PT+Sans+Narrow:wght@400;700&family=Protest+Guerrilla&family=Quicksand:wght@300..700&display=swap');
+/*PRODUCTS H2 FONT*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=PT+Sans+Narrow:wght@400;700&family=Protest+Guerrilla&family=Quicksand:wght@300..700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.0;
+    background-color: #F5F7F8;
+    color: #333;
+}
+
+header {
+    background: #F6F5F2;
+    color: #181C14;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between; /* Space between the elements */
+    align-items: center; /* Center vertically */
+    position: fixed; /* Make the header fixed */
+    top: 0; /* Position it at the top */
+    left: 0; /* Align with the left edge */
+    right: 0; /* Align with the right edge */
+    z-index: 1000; /* Ensure it stays on top of other elements */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Add shadow */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    font-family: "Protest Guerrilla", sans-serif;
+}
+header a {
+    text-decoration: none;
+    color: #181C14;
+}
+
+nav {
+    flex-grow: 1; /* Allow nav to take up available space */
+    text-align: center; /* Center the nav items */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Display flex for horizontal alignment */
+    justify-content: center; /* Center the nav items */
+    font-family: "PT Sans Narrow", sans-serif;
+}
+
+nav ul li {
+    margin: 0 15px; /* Margin between nav items */
+}
+nav ul li:hover {
+    text-decoration: underline;
+    transition-delay: 1.5s;
+
+}
+
+nav a {
+    color: #181C14;
+    text-decoration: none;
+}
+
+.user-menu {
+    display: flex; /* Use flexbox for user menu */
+    align-items: center; /* Center items vertically */
+}
+
+.btn2 {
+    background: #181C14;
+    /*background: #697565;*/
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 10px; /* Margin between buttons */
+    font-family: "PT Sans Narrow", sans-serif;
+}
+.btn2:hover {
+    background: #697565;
+}
+.btn1 {
+    background: none;
+    /*background: #697565;*/
+    color: #181C14;
+    border: none;
+    /*padding: 10px 15px;*/
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 10px; /* Margin between buttons */
+    font-family: "PT Sans Narrow", sans-serif;
+}
+.btn {
+    background: #295F98;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 10px; /* Margin between buttons */
+    font-family: "PT Sans Narrow", sans-serif;
+    align-items: center;
+    justify-content: center;
+}
+
+/*PROFILE*/
+/* Profile Section Styles */
+
+#profile {
+
+    max-width: 500px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #EEEEEE; /* White background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 
+        0 2px 5px rgba(0, 0, 0, 0.2),  /* Bottom shadow */
+        0 -2px 5px rgba(0, 0, 0, 0.2), /* Top shadow */
+        2px 0 5px rgba(0, 0, 0, 0.2),  /* Right shadow */
+        -2px 0 5px rgba(0, 0, 0, 0.2); /* Left shadow */
+}
+
+#profile h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #181C14;
+    font-size: 24px;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-info div {
+    margin-bottom: 15px; 
+}
+
+.profile-info label {
+    font-weight: bold;
+    color: #181C14;
+}
+
+.profile-info p {
+    margin: 5px 0;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+.profile-info p#password {
+    color: transparent;
+    text-shadow: 0 0 0 #333;
+}
+/*ORDER BUTTON*/
+.logout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.order-button {
+    background-color: red;
+    color: white;
+    padding: 6px 50px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s; 
+    margin-top: 5%;
+    align-items: center;
+    justify-content: center;
+}
+
+.order-button:hover {
+    background-color: #333;
+}
+
+/*FOOTER*/
+.footer-row {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background: #f1f1f1;
+}
+
+.footer-section {
+    width: 30%;
+    font-family: "PT Sans Narrow", sans-serif;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    background: #eee;
+    font-family: "PT Sans Narrow", sans-serif;
+}
